@@ -3,22 +3,23 @@
 from __future__ import print_function
 
 from argparse import ArgumentParser
+
 from aws.price import PriceNotFoundError, AWSPricingStore
 from aws.instance import AWSRunningInstances, AWSInstance
-from reporter import HtmlEmailTemplateReportWriter, ConsoleReporter
+from reports import HtmlEmailTemplateReportWriter, ConsoleReporter
+
 from datetime import datetime
 import json 
 import logging
 import math
 import sys
-from pprint import pprint
 
 regions = ['us-east-1','us-west-1','us-west-2','eu-west-1','sa-east-1',
             'ap-southeast-1','ap-southeast-2','ap-northeast-1']
 
 class Whitelist(object):
 
-    def __init__(self, whitelistfile = 'whitelist.json'):
+    def __init__(self, whitelistfile = 'data.whitelist.json'):
         # REVIEW : is it okay if this just throws
         with open(whitelistfile) as data_file:
             json_contents = json.load(data_file)

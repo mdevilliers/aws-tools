@@ -12,7 +12,7 @@ class PriceNotFoundError(Exception):
 class AWSPricingStore(object):
     """Stores current prices for running instances."""
 
-    def __init__(self, price_file = 'aws.ondemand.json'):
+    def __init__(self, price_file = 'data.aws.ondemand.json'):
 
         # REVIEW : is it okay if this just throws
         with open(price_file) as data_file:
