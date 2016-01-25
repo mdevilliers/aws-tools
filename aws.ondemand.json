@@ -1,0 +1,4587 @@
+{
+  "regions": [
+    {
+      "region": "us-east-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.0065,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.0065,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.013,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.013,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.026,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.026,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.052,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.052,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.104,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.104,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.12,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.12,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.239,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.239,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.479,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.479,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.958,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.958,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.394,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.394,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.067,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.067,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.133,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.133,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.266,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.266,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.532,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.532,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.105,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.105,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.209,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.209,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.419,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.419,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.838,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.838,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.675,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.675,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.105,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.105,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.21,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.21,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.42,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.42,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.84,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.84,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.68,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.68,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.65,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.65,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.6,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.6,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.166,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.166,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.333,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.333,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.665,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.665,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.33,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.33,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.66,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.66,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.853,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.853,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.705,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.705,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.41,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.41,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.82,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.82,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.69,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.69,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.38,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.38,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.76,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.76,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 5.52,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 5.52,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "us-west-2",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.0065,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.0065,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.013,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.013,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.026,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.026,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.052,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.052,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.104,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.104,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.12,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.12,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.239,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.239,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.479,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.479,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.958,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.958,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.394,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.394,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.067,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.067,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.133,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.133,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.266,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.266,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.532,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.532,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.105,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.105,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.209,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.209,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.419,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.419,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.838,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.838,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.675,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.675,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.105,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.105,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.21,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.21,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.42,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.42,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.84,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.84,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.68,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.68,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.65,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.65,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.6,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.6,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.166,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.166,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.333,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.333,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.665,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.665,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.33,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.33,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.66,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.66,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.853,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.853,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.705,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.705,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.41,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.41,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.82,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.82,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.69,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.69,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.38,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.38,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.76,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.76,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 5.52,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 5.52,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "us-west-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.0085,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.0085,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.017,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.017,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.034,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.034,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.068,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.068,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.136,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.136,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.14,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.14,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.279,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.279,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.559,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.559,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.117,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.117,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.793,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.793,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.077,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.077,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.154,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.154,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.308,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.308,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.616,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.616,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.131,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.131,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.262,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.262,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.524,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.524,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.049,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.049,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.098,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.098,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.12,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.12,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.239,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.239,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.478,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.478,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.956,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.956,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.912,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.912,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.702,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.702,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.808,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.808,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.185,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.185,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.371,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.371,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.741,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.741,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.482,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.482,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.964,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.964,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.938,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.938,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.876,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.876,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.751,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.751,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 7.502,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 7.502,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "eu-west-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.007,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.007,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.014,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.014,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.028,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.028,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.056,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.056,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.112,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.112,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.132,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.132,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.264,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.264,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.528,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.528,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.056,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.056,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.641,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.641,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.073,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.073,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.146,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.146,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.293,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.293,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.585,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.585,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.119,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.119,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.238,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.238,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.477,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.477,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.953,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.953,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.906,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.906,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.12,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.12,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.239,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.239,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.478,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.478,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.956,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.956,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.912,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.912,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.702,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.702,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.808,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.808,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.185,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.185,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.371,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.371,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.741,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.741,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.482,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.482,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.964,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.964,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.938,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.938,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.876,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.876,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.751,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.751,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 7.502,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 7.502,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.735,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.735,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.47,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.47,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.94,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.94,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 5.88,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 5.88,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "eu-central-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.015,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.015,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.03,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.03,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.06,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.06,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.12,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.12,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.143,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.143,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.285,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.285,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.57,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.57,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.14,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.14,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.85,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.85,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.079,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.079,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.158,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.158,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.315,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.315,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.632,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.632,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.134,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.134,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.267,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.267,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.534,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.534,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.069,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.069,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.138,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.138,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.129,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.129,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.258,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.258,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.516,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.516,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.032,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.032,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.064,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.064,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.772,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.772,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.088,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.088,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.2,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.2,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.4,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.4,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.8,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.8,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.6,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.6,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.201,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.201,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.013,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.013,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.026,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.026,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 4.051,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 4.051,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 8.102,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 8.102,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.794,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.794,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.588,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.588,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.176,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.176,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.352,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.352,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "ap-southeast-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.01,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.01,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.02,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.02,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.04,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.04,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.08,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.08,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.16,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.16,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.178,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.178,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.355,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.355,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.711,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.711,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.421,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.421,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.553,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.553,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.098,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.098,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.196,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.196,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.392,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.392,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.784,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.784,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.144,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.144,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.289,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.289,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.578,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.578,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.155,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.155,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.31,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.31,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.132,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.132,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.265,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.265,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.529,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.529,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.058,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.058,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.117,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.117,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.0,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.0,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 4.0,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 4.0,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.2,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.2,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.399,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.399,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.798,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.798,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.596,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.596,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.192,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.192,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.018,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.018,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.035,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.035,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 4.07,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 4.07,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 8.14,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 8.14,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.87,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.87,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.74,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.74,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.48,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.48,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.96,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.96,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "ap-northeast-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.01,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.01,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.02,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.02,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.04,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.04,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.08,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.08,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.16,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.16,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.174,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.174,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.348,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.348,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.695,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.695,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.391,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.391,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.477,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.477,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.096,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.096,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.193,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.193,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.385,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.385,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.77,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.77,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.133,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.133,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.265,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.265,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.531,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.531,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.061,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.061,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.122,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.122,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.128,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.128,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.255,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.255,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.511,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.511,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.021,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.021,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.043,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.043,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.898,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.898,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.592,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.592,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.2,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.2,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.399,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.399,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.798,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.798,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.596,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.596,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.192,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.192,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.001,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.001,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.001,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.001,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 4.002,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 4.002,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 8.004,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 8.004,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.844,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.844,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.688,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.688,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.376,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.376,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.752,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.752,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "ap-southeast-2",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.02,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.02,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.04,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.04,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.08,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.08,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.16,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.16,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.168,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.168,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.336,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.336,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.673,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.673,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.345,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.345,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.363,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.363,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.093,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.093,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.186,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.186,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.372,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.372,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.745,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.745,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.137,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.137,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.275,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.275,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.549,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.549,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.097,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.097,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.195,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.195,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.132,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.132,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.265,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.265,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.529,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.529,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.058,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.058,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.117,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.117,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.898,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.898,
+          "type": "g2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.592,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.592,
+          "type": "g2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.2,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.2,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.399,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.399,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.798,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.798,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.596,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.596,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.192,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.192,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.018,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.018,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.035,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.035,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 4.07,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 4.07,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 8.14,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 8.14,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.87,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.87,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.74,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.74,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.48,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.48,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.96,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.96,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "ap-northeast-2",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.01,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.01,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.02,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.02,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.04,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.04,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.08,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.08,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.16,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.16,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.165,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.165,
+          "type": "m4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.331,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.331,
+          "type": "m4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.66,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.66,
+          "type": "m4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.321,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.321,
+          "type": "m4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.303,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.303,
+          "type": "m4.10xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.12,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.12,
+          "type": "c4.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.239,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.239,
+          "type": "c4.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.478,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.478,
+          "type": "c4.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.955,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.955,
+          "type": "c4.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.91,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.91,
+          "type": "c4.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.2,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.2,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.399,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.399,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.798,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.798,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.596,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.596,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.192,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.192,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.001,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.001,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.001,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.001,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 4.002,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 4.002,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 8.004,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 8.004,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.844,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.844,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.688,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.688,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.376,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.376,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.752,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.752,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "sa-east-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.0135,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.0135,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.027,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.027,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.054,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.054,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.108,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.108,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.216,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.216,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.095,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.095,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.19,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.19,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.381,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.381,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.761,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.761,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.163,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.163,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.325,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.325,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.65,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.65,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.3,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.3,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.6,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.6,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.799,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.799,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 5.597,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 5.597,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    },
+    {
+      "region": "us-gov-west-1",
+      "instanceTypes": [
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.0075,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.0075,
+          "type": "t2.nano",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.015,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.015,
+          "type": "t2.micro",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.031,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.031,
+          "type": "t2.small",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.062,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.062,
+          "type": "t2.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.124,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.124,
+          "type": "t2.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.084,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.084,
+          "type": "m3.medium",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.168,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.168,
+          "type": "m3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.336,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.336,
+          "type": "m3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.672,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.672,
+          "type": "m3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.126,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.126,
+          "type": "c3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.252,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.252,
+          "type": "c3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.504,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.504,
+          "type": "c3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.008,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.008,
+          "type": "c3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.016,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.016,
+          "type": "c3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.2,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.2,
+          "type": "r3.large",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.399,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.399,
+          "type": "r3.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.798,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.798,
+          "type": "r3.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.596,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.596,
+          "type": "r3.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.192,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.192,
+          "type": "r3.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.023,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.023,
+          "type": "i2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 2.046,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 2.046,
+          "type": "i2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 4.092,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 4.092,
+          "type": "i2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 8.184,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 8.184,
+          "type": "i2.8xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 0.828,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 0.828,
+          "type": "d2.xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 1.656,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 1.656,
+          "type": "d2.2xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 3.312,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 3.312,
+          "type": "d2.4xlarge",
+          "utilization": "ondemand"
+        },
+        {
+          "prices": {
+            "ondemand": {
+              "hourly": 6.624,
+              "upfront_perGB": ""
+            }
+          },
+          "os": "linux",
+          "price": 6.624,
+          "type": "d2.8xlarge",
+          "utilization": "ondemand"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "currency": "USD",
+    "unit": "perhr"
+  }
+}
