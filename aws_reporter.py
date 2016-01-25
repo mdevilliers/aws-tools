@@ -62,6 +62,13 @@ def main():
                 parser.print_help()
                 sys.exit(2)
                 return
+    # go get the data
+    instances = _execute_report(opts.aws_access_key, opts.aws_secret_key)
+
+    # format and send the reports
+    _output_reports(instances, opts.reports.split(","), opts)
+   
+def _execute_report(aws_access_key, aws_secret_key):
 
     now = datetime.utcnow()
     grace_period_in_hours = 24
@@ -72,7 +79,7 @@ def main():
 
     for region in regions :
 
-        for instance in instance_manager.instances(opts.aws_access_key, opts.aws_secret_key, region) :
+        for instance in instance_manager.instances(aws_access_key, aws_secret_key, region) :
 
             if whitelist.ok(instance.identifier) and _running_before_min_age(now, instance.createdAtUtc, grace_period_in_hours):
 
@@ -86,17 +93,20 @@ def main():
                                                                                         instance.aws_instance_type, 
                                                                                         instance.aws_region, 
                                                                                         instance.createdAtUtc))
+    return costed_instances
 
-    for report_type in opts.reports.split(","):
+def _output_reports(instances, report_list, opts):
+
+    for report_type in report_list:
 
         if report_type == "Console" :
             consolereporter = ConsoleReporter()
-            consolereporter.report(costed_instances)
+            consolereporter.report(instances)
         elif report_type == "Email" :
             email_reporter = HtmlEmailTemplateReportWriter( opts.email_from, 
                                                             opts.email_to.split(","), 
                                                             opts.email_password)  
-            email_reporter.report(costed_instances)
+            email_reporter.report(instances)
 
 def _running_before_min_age(now, created_at, grace_period_in_hours):
     return (now - created_at).total_seconds() > (grace_period_in_hours * 60 * 60)
