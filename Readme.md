@@ -1,9 +1,30 @@
 aws-usage-reporter
 ------------------
 
-Builds a report of out current aws instance and collates a report with their accrued usage.
+Builds a report of our current aws instances and collates a report with their accrued cost.
 
 The report can either be sent to the console and or via email.
+
+
+```
+usage: aws_reporter.py [-h] -aws-access-key AWS_ACCESS_KEY -aws-secret-key
+                       AWS_SECRET_KEY [--email-password EMAIL_PASSWORD]
+                       [--email-from EMAIL_FROM] [--email-to EMAIL_TO]
+                       [--reports REPORTS]
+
+Collates a report of running AWS instances
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -aws-access-key AWS_ACCESS_KEY
+  -aws-secret-key AWS_SECRET_KEY
+  --email-password EMAIL_PASSWORD
+  --email-from EMAIL_FROM
+  --email-to EMAIL_TO   Comma seperated list of email recipients
+  --reports REPORTS     Comma seperated list frawn from the following -
+                        Console, Email
+```
+
 
 To report to the console
 
