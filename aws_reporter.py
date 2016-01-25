@@ -10,6 +10,7 @@ from datetime import datetime
 import json 
 import logging
 import math
+import sys
 from pprint import pprint
 
 regions = ['us-east-1','us-west-1','us-west-2','eu-west-1','sa-east-1',
@@ -28,27 +29,24 @@ class Whitelist(object):
 
 def main():
 
-    # Brief
-    # daily email to everyone in the engineering team containing: 
-    # AWS instance id,  Description, Key-Pair, Tags, Launch date (over 24h), type of instance, Cost since launch 
-    # $99 id-238773     m3.xlarge    25/12/2015 10:10:10 Key-Pair Test Instance Tags: { 'name': 'lixo' } 
-    # Preferably delivered as a docker instance that I can run on a t2.micro or any other platform. 
-    # Must allow for whitelisting instance-ids for services meant to run 24/7 
-
-    # format email
-    # send to mailing list
-
     parser = ArgumentParser(
         'aws_reporter.py', description="Collates a report of running AWS instances"
     )
     parser.add_argument(
-        '--aws-access-key', required=True
+        '-aws-access-key', required=True
     )
     parser.add_argument(
-        '--aws-secret-key', required=True
+        '-aws-secret-key', required=True
     )
     parser.add_argument(
-        '--email-password', required=True
+        '--email-password', default=None
+    )
+    parser.add_argument(
+        '--email-from', default=None
+    )
+    parser.add_argument(
+        '--email-to', default=None,
+        help="Comma seperated list of email recipients"
     )
     parser.add_argument(
         '--reports', default="Console", 
@@ -56,6 +54,13 @@ def main():
     )
 
     opts = parser.parse_args()
+
+    if "Email" in opts.reports :
+            if opts.email_from == None or opts.email_to.split(",") == None or opts.email_password == None :
+                print("Email reports require --email-password, --email-from and --email-to")
+                parser.print_help()
+                sys.exit(2)
+                return
 
     now = datetime.utcnow()
     grace_period_in_hours = 24
@@ -87,8 +92,9 @@ def main():
             consolereporter = ConsoleReporter()
             consolereporter.report(costed_instances)
         elif report_type == "Email" :
-            # "jorge.costa@clusterhq.com",
-            email_reporter = HtmlEmailTemplateReportWriter("mark.devilliers@clusterhq.com", ["markdevilliers@gmail.com"], opts.email_password)  
+            email_reporter = HtmlEmailTemplateReportWriter( opts.email_from, 
+                                                            opts.email_to.split(","), 
+                                                            opts.email_password)  
             email_reporter.report(costed_instances)
 
 def _running_before_min_age(now, created_at, grace_period_in_hours):
