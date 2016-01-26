@@ -5,6 +5,11 @@ Builds a report of our current aws instances and collates a report with their ac
 
 The report can either be sent to the console and or via email.
 
+Install dependancies
+
+```
+pip install -r requirements.txt
+```
 
 ```
 usage: aws_reporter.py [-h] -aws-access-key AWS_ACCESS_KEY -aws-secret-key
