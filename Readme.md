@@ -1,7 +1,7 @@
 aws-usage-reporter
 ------------------
 
-Builds a report of your current aws instances along side their accrued cost.
+Build a report of your current aws instances along side their accrued cost.
 
 The report can either be sent to the console and or via email.
 
