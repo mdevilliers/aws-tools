@@ -107,7 +107,7 @@ def _execute_report(aws_access_key, aws_secret_key):
 
         for instance in instance_manager.instances(aws_access_key, aws_secret_key, region) :
 
-            if whitelist.ok(instance.identifier) and _running_before_min_age(now, instance.createdAtUtc, grace_period_in_hours):
+            if whitelist.ok(instance.identifier) and _running_before_min_age(now, instance.launchedAtUtc, grace_period_in_hours):
 
                 try :
                     price = price_store.cost_per_hour(instance.aws_region, instance.aws_instance_type)
@@ -118,7 +118,7 @@ def _execute_report(aws_access_key, aws_secret_key):
                     logging.warning("Price not found for {} ({} in {} running since {})".format(instance.identifier, 
                                                                                         instance.aws_instance_type, 
                                                                                         instance.aws_region, 
-                                                                                        instance.createdAtUtc))
+                                                                                        instance.launchedAtUtc))
     return costed_instances
 
 def _output_reports(instances, report_list, opts):

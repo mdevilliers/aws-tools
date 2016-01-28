@@ -31,11 +31,11 @@ class AWSRunningInstances(object):
             for instance in reservation.instances:
 
                 if instance.state == state :
-                    createdAtUtc = self._parse_utc_date_time_str(instance.launch_time)
+                    launchedAtUtc = self._parse_utc_date_time_str(instance.launch_time)
                     identifier = instance.id
 
                     yield AWSInstance(  identifier          = identifier,
-                                        createdAtUtc        = createdAtUtc,  
+                                        launchedAtUtc       = launchedAtUtc,  
                                         aws_region          = aws_region,
                                         aws_instance_type   = instance.instance_type,
                                         keyname             = instance.key_name,
@@ -47,11 +47,11 @@ class AWSRunningInstances(object):
 
 class AWSInstance(object):
 
-    def __init__(self, identifier, createdAtUtc, aws_region, aws_instance_type, keyname, tags = [] ):
+    def __init__(self, identifier, launchedAtUtc, aws_region, aws_instance_type, keyname, tags = [] ):
         self.identifier = identifier
         self.cost = 0.0
         self.cost_per_hour = 0.0
-        self.createdAtUtc = createdAtUtc
+        self.launchedAtUtc = launchedAtUtc
         self.aws_region = aws_region
         self.aws_instance_type = aws_instance_type
         self.keyname = keyname
@@ -68,6 +68,6 @@ class AWSInstance(object):
 
     def _total_hours_since_creation(self):
         now = datetime.utcnow()
-        delta_since_last_update = now - self.createdAtUtc
+        delta_since_last_update = now - self.launchedAtUtc
         total_seconds = delta_since_last_update.total_seconds()
         return math.ceil( total_seconds / 3600)

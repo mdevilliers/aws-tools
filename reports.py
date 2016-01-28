@@ -20,7 +20,8 @@ class ConsoleReporter(object):
             total_cost += instance.cost
             total_cost_per_hour += instance.cost_per_hour
 
-            print("{} ${:.2f} \t{} \t{} \t{} \t{} \t{}".format( instance.createdAtUtc, 
+            print("{} ${:.2f} \t{} \t{} \t{} \t{} \t{}".format( 
+                                            instance.launchedAtUtc, 
                                             instance.cost,
                                             instance.identifier, 
                                             instance.aws_instance_type,
@@ -48,13 +49,23 @@ class HtmlEmailTemplateReportWriter(object):
         total_cost_per_hour = 0  
 
         html = "<html><head></head><body><table border='1'>"
+        html += "<tr><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th></tr>".format(
+                    "Launched",
+                    "Cost",
+                    "Identifier",
+                    "Type",
+                    "Region",
+                    "Keyname",
+                    "Tags"
+            )
+        
         for instance in instances:
 
             total_cost += instance.cost
             total_cost_per_hour += instance.cost_per_hour
 
             row = "<tr><td>{}</td><td>${:.2f}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td><td width='45%'>{}</td><tr>".format(
-                                instance.createdAtUtc, 
+                                instance.launchedAtUtc, 
                                 instance.cost,
                                 instance.identifier, 
                                 instance.aws_instance_type,
