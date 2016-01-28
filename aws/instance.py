@@ -5,6 +5,7 @@ import boto.ec2
 from datetime import datetime
 import math
 
+
 class AWSRunningInstances(object):
     """Retreives a list of running instances"""
 
@@ -17,36 +18,39 @@ class AWSRunningInstances(object):
     :returns: AWSInstance
 
     """
-    def instances(self, aws_access_key, aws_secret_key, aws_region, state = "running") :
-        
+    def instances(self, aws_access_key, aws_secret_key,
+                  aws_region, state="running"):
+
         ec2_conn = boto.ec2.connect_to_region(aws_region,
-                    aws_access_key_id=aws_access_key,
-                    aws_secret_access_key=aws_secret_key)
-         
+                                              aws_access_key_id=aws_access_key,
+                                              aws_secret_access_key=aws_secret_key)
+
         reservations = ec2_conn.get_all_reservations()
 
         for reservation in reservations:
 
             for instance in reservation.instances:
 
-                if instance.state == state :
-                    launchedAtUtc = self._parse_utc_date_time_str(instance.launch_time)
+                if instance.state == state:
+                    launchedAtUtc = self._parse_date_time(instance.launch_time)
                     identifier = instance.id
 
-                    yield AWSInstance(  identifier          = identifier,
-                                        launchedAtUtc       = launchedAtUtc,  
-                                        aws_region          = aws_region,
-                                        aws_instance_type   = instance.instance_type,
-                                        keyname             = instance.key_name,
-                                        tags                = instance.tags )
+                    yield AWSInstance(identifier=identifier,
+                                      launchedAtUtc=launchedAtUtc,
+                                      aws_region=aws_region,
+                                      aws_instance_type=instance.instance_type,
+                                      keyname=instance.key_name,
+                                      tags=instance.tags)
 
-    def _parse_utc_date_time_str(self, datetime_str):
+    def _parse_date_time(self, datetime_str):
         # example - 2016-01-13T15:42:25.000Z
-        return datetime.strptime(datetime_str, '%Y-%m-%dT%H:%M:%S.000Z')                      
+        return datetime.strptime(datetime_str, '%Y-%m-%dT%H:%M:%S.000Z')
+
 
 class AWSInstance(object):
 
-    def __init__(self, identifier, launchedAtUtc, aws_region, aws_instance_type, keyname, tags = [] ):
+    def __init__(self, identifier, launchedAtUtc, aws_region,
+                 aws_instance_type, keyname, tags=[]):
         self.identifier = identifier
         self.cost = 0.0
         self.cost_per_hour = 0.0
@@ -69,4 +73,4 @@ class AWSInstance(object):
         now = datetime.utcnow()
         delta_since_last_update = now - self.launchedAtUtc
         total_seconds = delta_since_last_update.total_seconds()
-        return math.ceil( total_seconds / 3600)
+        return math.ceil(total_seconds / 3600)
