@@ -9,32 +9,6 @@ from email.mime.text import MIMEText
 from datetime import datetime
 
 
-class ConsoleReporter(object):
-
-    def write(self, instances):
-
-        instances.sort(key=lambda x: x.cost, reverse=True)
-        total_cost = 0
-        total_cost_per_hour = 0
-        for instance in instances:
-
-            total_cost += instance.cost
-            total_cost_per_hour += instance.cost_per_hour
-
-            print("{} ${:.2f} \t{} \t{} \t{} \t{} \t{}".format(
-                                            instance.launchedAtUtc,
-                                            instance.cost,
-                                            instance.identifier,
-                                            instance.aws_instance_type,
-                                            instance.aws_region,
-                                            instance.keyname,
-                                            instance.tags))
-
-        print ("Ongoing (hour) : \t${:.2f}".format(total_cost_per_hour))
-        print ("Ongoing (day) : \t${:.2f}".format(total_cost_per_hour * 24))
-        print ("Total accrued cost : \t${:.2f}".format(total_cost))
-
-
 class HtmlEmailTemplateReportWriter(object):
 
     def __init__(self, from_email_address, recipients, email_password):
@@ -42,7 +16,7 @@ class HtmlEmailTemplateReportWriter(object):
         self._recipients = recipients
         self._email_password = email_password
 
-    def write(self, instances):
+    def write(self, instances, volumes):
 
         instances.sort(key=lambda x: x.cost, reverse=True)
 
@@ -76,11 +50,11 @@ class HtmlEmailTemplateReportWriter(object):
             html += row
 
         html += "</table>"
-        html += "</br> Ongoing (hour) : ${:.2f}<br />Ongoing (day) : ${:.2f}<br />Total accrued cost : ${:.2f}</body></html>".format(
+        html += "</br> Ongoing (hour) : ${:.2f}<br />Ongoing (day) : ${:.2f}<br />Total accrued cost : ${:.2f} <br / >Volumes (total): {} </body></html>".format(
             total_cost_per_hour,
             total_cost_per_hour * 24,
-            total_cost
-            )
+            total_cost,
+            len(volumes))
 
         now = datetime.utcnow()
         title = "AWS Usage {}".format(now)

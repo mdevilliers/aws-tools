@@ -5,8 +5,8 @@ from __future__ import print_function
 from argparse import ArgumentParser, Action
 
 from aws.price import PriceNotFoundError, AWSPricingStore
-from aws.instance import AWSRunningInstances
-from reports import HtmlEmailTemplateReportWriter, ConsoleReporter
+from aws.aws import AWS
+from reports import ConsoleReporter, HtmlEmailTemplateReportWriter
 
 from datetime import datetime
 import json
@@ -64,10 +64,10 @@ def main():
                 sys.exit(2)
                 return
     # go get the data
-    instances = _execute_report(opts.aws_access_key, opts.aws_secret_key)
+    instances, volumes = _execute_report(opts.aws_access_key, opts.aws_secret_key)
 
     # format and send the reports
-    _output_reports(instances, opts.reports.split(","), opts)
+    _output_reports(instances, volumes, opts.reports.split(","), opts)
 
 
 def _execute_report(aws_access_key, aws_secret_key):
@@ -76,12 +76,18 @@ def _execute_report(aws_access_key, aws_secret_key):
     grace_period_in_hours = 24
     whitelist = Whitelist()
     price_store = AWSPricingStore()
-    instance_manager = AWSRunningInstances()
     costed_instances = []
+    costed_volumes = []
 
     for region in regions:
 
-        for instance in instance_manager.instances(aws_access_key, aws_secret_key, region):
+        aws = AWS(aws_access_key, aws_secret_key, region)
+        
+        for volume in aws.volumes():
+
+            costed_volumes.append(volume)
+
+        for instance in aws.instances():
 
             if whitelist.ok(instance.identifier) and _running_before_min_age(now, instance.launchedAtUtc, grace_period_in_hours):
 
@@ -95,21 +101,20 @@ def _execute_report(aws_access_key, aws_secret_key):
                                                                                                 instance.aws_instance_type,
                                                                                                 instance.aws_region,
                                                                                                 instance.launchedAtUtc))
-    return costed_instances
+    return costed_instances, costed_volumes
 
-
-def _output_reports(instances, report_list, opts):
+def _output_reports(instances, volumes, report_list, opts):
 
     for report_type in report_list:
 
         if report_type == "Console":
             reporter = ConsoleReporter()
-            reporter.write(instances)
+            reporter.write(instances, volumes)
         elif report_type == "Email":
             reporter = HtmlEmailTemplateReportWriter(opts.email_from,
                                                      opts.email_to.split(","),
                                                      opts.email_password)
-            reporter.write(instances)
+            reporter.write(instances, volumes)
 
 
 def _running_before_min_age(now, launched_at, grace_period_in_hours):
@@ -132,7 +137,7 @@ class Whitelist(object):
 
 # http://stackoverflow.com/questions/10551117/setting-options-from-environment-variables-when-using-argparse
 class EnvDefault(Action):
-    """Will inspect the environment for a variable
+    """Inspects the environment for a variable
     before looking for a command line value"""
     def __init__(self, envvar, required=True, default=None, **kwargs):
         if not default and envvar:

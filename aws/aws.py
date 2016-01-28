@@ -6,26 +6,25 @@ from datetime import datetime
 import math
 
 
-class AWSRunningInstances(object):
-    """Retreives a list of running instances"""
+class AWS(object):
 
-    """
+    def __init__(self, aws_access_key, aws_secret_key,
+                 aws_region):
 
-    :param aws_access_key
-    :param aws_secret_key
+        self._connection = boto.ec2.connect_to_region(aws_region,
+                                              aws_access_key_id=aws_access_key,
+                                              aws_secret_access_key=aws_secret_key)
+        self._region = aws_region
+
+    """Retreives a list of running instances
+
     :param state one of running, terminated, stopped
-
     :returns: AWSInstance
 
     """
-    def instances(self, aws_access_key, aws_secret_key,
-                  aws_region, state="running"):
+    def instances(self, state="running"):
 
-        ec2_conn = boto.ec2.connect_to_region(aws_region,
-                                              aws_access_key_id=aws_access_key,
-                                              aws_secret_access_key=aws_secret_key)
-
-        reservations = ec2_conn.get_all_reservations()
+        reservations = self._connection.get_all_reservations()
 
         for reservation in reservations:
 
@@ -33,19 +32,41 @@ class AWSRunningInstances(object):
 
                 if instance.state == state:
                     launchedAtUtc = self._parse_date_time(instance.launch_time)
-                    identifier = instance.id
 
-                    yield AWSInstance(identifier=identifier,
+                    yield AWSInstance(identifier=instance.id,
                                       launchedAtUtc=launchedAtUtc,
-                                      aws_region=aws_region,
+                                      aws_region=self._region,
                                       aws_instance_type=instance.instance_type,
                                       keyname=instance.key_name,
                                       tags=instance.tags)
+    def volumes(self):
+
+        volumes = self._connection.get_all_volumes()
+
+        for volume in volumes:
+            createdAtUtc = self._parse_date_time(volume.create_time)
+ 
+            yield AWSVolume(volume.id, volume.size, volume.type, self._region, volume.iops, createdAtUtc)
+
 
     def _parse_date_time(self, datetime_str):
         # example - 2016-01-13T15:42:25.000Z
-        return datetime.strptime(datetime_str, '%Y-%m-%dT%H:%M:%S.000Z')
+        return datetime.strptime(datetime_str, '%Y-%m-%dT%H:%M:%S.%fZ')
 
+
+class AWSVolume(object):
+
+    def __init__(self, identifier, size, volume_type, aws_region, iops, createdAtUtc):
+        self.identifier = identifier
+        self.size = size
+        self.type = volume_type
+        self.aws_region = aws_region,
+        self.iops = iops
+        self.createdAtUtc = createdAtUtc
+        self.cost = 0.0
+
+    def calculate_cost(self, something):
+        return 0.0
 
 class AWSInstance(object):
 
