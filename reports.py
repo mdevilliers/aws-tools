@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 from __future__ import print_function
 
@@ -10,7 +9,7 @@ from datetime import datetime
 
 class ConsoleReporter(object):
 
-    def report(self, instances):
+    def write(self, instances):
 
         instances.sort(key=lambda x: x.cost, reverse=True)            
         total_cost = 0
@@ -41,7 +40,7 @@ class HtmlEmailTemplateReportWriter(object):
         self._recipients = recipients
         self._email_password = email_password
 
-    def report(self, instances):
+    def write(self, instances):
 
         instances.sort(key=lambda x: x.cost, reverse=True)
 

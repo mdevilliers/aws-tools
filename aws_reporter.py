@@ -127,12 +127,12 @@ def _output_reports(instances, report_list, opts):
 
         if report_type == "Console" :
             consolereporter = ConsoleReporter()
-            consolereporter.report(instances)
+            consolereporter.write(instances)
         elif report_type == "Email" :
             email_reporter = HtmlEmailTemplateReportWriter( opts.email_from, 
                                                             opts.email_to.split(","), 
                                                             opts.email_password)  
-            email_reporter.report(instances)
+            email_reporter.write(instances)
 
 def _running_before_min_age(now, launched_at, grace_period_in_hours):
     return (now - launched_at).total_seconds() > (grace_period_in_hours * 60 * 60)
