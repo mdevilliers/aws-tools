@@ -134,8 +134,8 @@ def _output_reports(instances, report_list, opts):
                                                             opts.email_password)  
             email_reporter.report(instances)
 
-def _running_before_min_age(now, created_at, grace_period_in_hours):
-    return (now - created_at).total_seconds() > (grace_period_in_hours * 60 * 60)
+def _running_before_min_age(now, launched_at, grace_period_in_hours):
+    return (now - launched_at).total_seconds() > (grace_period_in_hours * 60 * 60)
 
 if __name__ == '__main__':
     main()
