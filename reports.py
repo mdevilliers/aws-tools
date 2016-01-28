@@ -1,4 +1,5 @@
 
+
 from __future__ import print_function
 
 import smtplib
@@ -7,24 +8,25 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
 
+
 class ConsoleReporter(object):
 
     def write(self, instances):
 
-        instances.sort(key=lambda x: x.cost, reverse=True)            
+        instances.sort(key=lambda x: x.cost, reverse=True)
         total_cost = 0
-        total_cost_per_hour = 0    
-        for instance in instances :
+        total_cost_per_hour = 0
+        for instance in instances:
 
             total_cost += instance.cost
             total_cost_per_hour += instance.cost_per_hour
 
-            print("{} ${:.2f} \t{} \t{} \t{} \t{} \t{}".format( 
-                                            instance.launchedAtUtc, 
+            print("{} ${:.2f} \t{} \t{} \t{} \t{} \t{}".format(
+                                            instance.launchedAtUtc,
                                             instance.cost,
-                                            instance.identifier, 
+                                            instance.identifier,
                                             instance.aws_instance_type,
-                                            instance.aws_region, 
+                                            instance.aws_region,
                                             instance.keyname,
                                             instance.tags))
 
@@ -45,7 +47,7 @@ class HtmlEmailTemplateReportWriter(object):
         instances.sort(key=lambda x: x.cost, reverse=True)
 
         total_cost = 0
-        total_cost_per_hour = 0  
+        total_cost_per_hour = 0
 
         html = "<html><head></head><body><table border='1'>"
         html += "<tr><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th><th>{}</th></tr>".format(
@@ -56,23 +58,22 @@ class HtmlEmailTemplateReportWriter(object):
                     "Region",
                     "Keyname",
                     "Tags"
-            )
-        
+                )
+
         for instance in instances:
 
             total_cost += instance.cost
             total_cost_per_hour += instance.cost_per_hour
 
             row = "<tr><td>{}</td><td>${:.2f}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td><td width='45%'>{}</td><tr>".format(
-                                instance.launchedAtUtc, 
+                                instance.launchedAtUtc,
                                 instance.cost,
-                                instance.identifier, 
+                                instance.identifier,
                                 instance.aws_instance_type,
-                                instance.aws_region, 
+                                instance.aws_region,
                                 instance.keyname,
                                 instance.tags)
             html += row
-
 
         html += "</table>"
         html += "</br> Ongoing (hour) : ${:.2f}<br />Ongoing (day) : ${:.2f}<br />Total accrued cost : ${:.2f}</body></html>".format(
@@ -89,8 +90,8 @@ class HtmlEmailTemplateReportWriter(object):
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login( self._from_email_address, self._email_password)
- 
+        server.login(self._from_email_address, self._email_password)
+
         msg = MIMEMultipart('alternative')
         msg['Subject'] = title
         msg['From'] = self._from_email_address
