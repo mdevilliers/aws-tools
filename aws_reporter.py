@@ -4,7 +4,7 @@ from __future__ import print_function
 
 from argparse import ArgumentParser, Action
 
-from aws.price import PriceNotFoundError, AWSPricingStore
+from aws.price import PriceNotFoundError
 from aws.aws import AWS
 from reports import ConsoleReporter, HtmlEmailTemplateReportWriter
 
@@ -75,14 +75,13 @@ def _execute_report(aws_access_key, aws_secret_key):
     now = datetime.utcnow()
     grace_period_in_hours = 24
     whitelist = Whitelist()
-    price_store = AWSPricingStore()
     costed_instances = []
     costed_volumes = []
 
     for region in regions:
 
         aws = AWS(aws_access_key, aws_secret_key, region)
-        
+
         for volume in aws.volumes():
 
             costed_volumes.append(volume)
@@ -92,8 +91,7 @@ def _execute_report(aws_access_key, aws_secret_key):
             if whitelist.ok(instance.identifier) and _running_before_min_age(now, instance.launchedAtUtc, grace_period_in_hours):
 
                 try:
-                    price = price_store.cost_per_hour(instance.aws_region, instance.aws_instance_type)
-                    instance.calculate_cost(price)
+                    instance.calculate_cost()
                     costed_instances.append(instance)
 
                 except PriceNotFoundError:
@@ -102,6 +100,7 @@ def _execute_report(aws_access_key, aws_secret_key):
                                                                                                 instance.aws_region,
                                                                                                 instance.launchedAtUtc))
     return costed_instances, costed_volumes
+
 
 def _output_reports(instances, volumes, report_list, opts):
 
