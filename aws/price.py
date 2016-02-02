@@ -22,7 +22,7 @@ class AWSPricingStore(object):
     def volume_cost_per_hour(self):
         return 0.0
 
-    def cost_per_hour(self, aws_region, aws_type):
+    def instance_cost_per_hour(self, aws_region, aws_type):
         """
         For a given region and type retrieves a cost per hour in USD
 

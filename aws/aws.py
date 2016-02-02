@@ -34,7 +34,7 @@ class AWS(object):
 
                 if instance.state == state:
                     launchedAtUtc = self._parse_date_time(instance.launch_time)
-                    cost_per_hour = price_store.instance_cost_per_hour(self._region, instance.aws_instance_type)
+                    cost_per_hour = price_store.instance_cost_per_hour(self._region, instance.instance_type)
 
                     yield AWSInstance(identifier=instance.id,
                                       launchedAtUtc=launchedAtUtc,
@@ -76,6 +76,7 @@ class AWSVolume(object):
         self.cost = 0.0
 
     def calculate_cost(self):
+        # https://aws.amazon.com/ebs/pricing/
         pass
 
 
