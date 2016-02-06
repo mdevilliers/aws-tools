@@ -50,16 +50,25 @@ class HtmlEmailTemplateReportWriter(object):
             html += row
 
         html += "</table>"
-        html += "</br> Ongoing (hour) : ${:.2f}<br />Ongoing (day) : ${:.2f}<br />Total accrued cost : ${:.2f} <br / >Volumes (total): {} </body></html>".format(
+        html += "</br> Ongoing (hour) : ${:.2f}<br />Ongoing (day) : ${:.2f}<br /> Ongoing (30 day month) : ${:.2f}<br />Total accrued cost : ${:.2f} <br / >".format(
             total_cost_per_hour,
             total_cost_per_hour * 24,
-            total_cost,
-            len(volumes))
+            total_cost_per_hour * 24 * 30,
+            total_cost)
+
+        volumes_cost_per_month = 0
+
+        for volume in volumes:
+            volumes_cost_per_month += volume.cost
+
+        html += "Volumes (total): {} <br/> Ongoing (month)</body></html>".format(
+            len(volumes),
+            volumes_cost_per_month)
 
         now = datetime.utcnow()
         title = "AWS Usage {}".format(now)
         self._send_email(title, html)
-
+        
     def _send_email(self, title, htmlmessage):
 
         server = smtplib.SMTP('smtp.gmail.com', 587)

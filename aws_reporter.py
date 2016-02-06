@@ -6,7 +6,8 @@ from argparse import ArgumentParser, Action
 
 from aws.price import PriceNotFoundError
 from aws.aws import AWS
-from reports import ConsoleReporter, HtmlEmailTemplateReportWriter
+from reports.console_report import ConsoleReporter
+from reports.email_report import HtmlEmailTemplateReportWriter
 
 from datetime import datetime
 import json
@@ -15,8 +16,7 @@ import os
 import sys
 
 regions = ['us-east-1', 'us-west-1', 'us-west-2', 'eu-west-1', 'sa-east-1',
-           'ap-southeast-1', 'ap-southeast-2', 'ap-northeast-1']
-
+            'ap-southeast-1', 'ap-southeast-2', 'ap-northeast-1']
 
 def main():
 
@@ -84,6 +84,7 @@ def _execute_report(aws_access_key, aws_secret_key):
 
         for volume in aws.volumes():
 
+            volume.calculate_cost()
             costed_volumes.append(volume)
 
         for instance in aws.instances():

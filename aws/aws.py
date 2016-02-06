@@ -16,7 +16,7 @@ class AWS(object):
                                                       aws_access_key_id=aws_access_key,
                                                       aws_secret_access_key=aws_secret_key)
         self._region = aws_region
-
+        self._price_store = AWSPricingStore()
     """Retreives a list of instances
 
     :param state one of running, terminated, stopped
@@ -26,7 +26,7 @@ class AWS(object):
     def instances(self, state="running"):
 
         reservations = self._connection.get_all_reservations()
-        price_store = AWSPricingStore()
+
 
         for reservation in reservations:
 
@@ -34,7 +34,7 @@ class AWS(object):
 
                 if instance.state == state:
                     launchedAtUtc = self._parse_date_time(instance.launch_time)
-                    cost_per_hour = price_store.instance_cost_per_hour(self._region, instance.instance_type)
+                    cost_per_hour = self._price_store.instance_cost_per_hour(self._region, instance.instance_type)
 
                     yield AWSInstance(identifier=instance.id,
                                       launchedAtUtc=launchedAtUtc,
@@ -56,8 +56,9 @@ class AWS(object):
 
         for volume in volumes:
             createdAtUtc = self._parse_date_time(volume.create_time)
+            cost_per_gb, iops_cost = self._price_store.volume_costs(self._region, volume.type)
 
-            yield AWSVolume(volume.id, volume.size, volume.type, self._region, volume.iops, createdAtUtc)
+            yield AWSVolume(volume.id, volume.size, volume.type, self._region, volume.iops, createdAtUtc, cost_per_gb, iops_cost)
 
     def _parse_date_time(self, datetime_str):
         # example - 2016-01-13T15:42:25.000Z
@@ -66,18 +67,66 @@ class AWS(object):
 
 class AWSVolume(object):
 
-    def __init__(self, identifier, size, volume_type, aws_region, iops, createdAtUtc):
+    def __init__(self, identifier, size, volume_type, aws_region, iops, createdAtUtc, cost_per_gb, iops_cost):
         self.identifier = identifier
         self.size = size
         self.type = volume_type
         self.aws_region = aws_region,
-        self.iops = iops
+        self.provisioned_iops = iops
         self.createdAtUtc = createdAtUtc
+        self.cost_per_gb = cost_per_gb
+        self.iops_cost = iops_cost
         self.cost = 0.0
 
     def calculate_cost(self):
         # https://aws.amazon.com/ebs/pricing/
-        pass
+
+        # EBS General Purpose (SSD) Volumes
+
+        # Volume storage for General Purpose (SSD) volumes is charged by 
+        # the amount you provision in GB per month, until you release the 
+        # storage. I/O is included in the price of General Purpose (SSD) 
+        # volumes, so you pay only for each GB of storage you provision.
+
+        # EBS Provisioned IOPS (SSD) Volumes
+
+        # Volume storage for EBS Provisioned IOPS (SSD) volumes is charged 
+        # by the amount you provision in GB per month, until you release 
+        # the storage. 
+
+        # With Provisioned IOPS (SSD) volumes, you are also 
+        # charged by the amount you provision in IOPS (input/output operations 
+        # per second) multiplied by the percentage of days you provision 
+        # for the month. For example, if you provision a volume with 1000 IOPS, 
+        # and keep this volume for 15 days in a 30 day month, then in a Region 
+        # that charges $0.10 per provisioned IOPS-month, you would be charged 
+        # $50 for the IOPS that you provision 
+        # ($0.10 per provisioned IOPS-month * 1000 IOPS provisioned * 15 days/30).  
+        # You will be charged for the IOPS provisioned on a EBS Provisioned IOPS 
+        # (SSD) volume even when the volume is detached from an instance.
+        
+        # EBS Magnetic Volumes
+        # Volume storage for EBS Magnetic volumes is charged by the amount you provision 
+        # in GB per month, until you release the storage. Volume I/O for EBS Magnetic 
+        # volumes is charged by the number of requests you make to your volume. 
+
+
+        # http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html
+        # loookup   nice name               data name
+        # gp2       General Purpose (SSD)   Amazon EBS General Purpose (SSD) volumes
+        # io1       Provisioned IOPS (SSD)  Amazon EBS Provisioned IOPS (SSD) volumes
+        # standard  Magnetic                Amazon EBS Magnetic volumes
+        # if self.type is 'gp2':
+        #     pass
+
+        # The EBS standard volume costs $0.10 per GB per month and $0.10 per one million I/O requests. 
+        # The EBS provisioned volume costs $0.125 per GB per month and $0.10 per provisioned IOPs per month. 
+        if self.type == 'standard':
+            self.cost = self.cost_per_gb * self.size
+        if self.type == 'gp2':
+            self.cost = self.cost_per_gb * self.size
+        if self.type == 'io1':
+            self.cost = (self.cost_per_gb * self.size) + ( self.provisioned_iops * self.iops_cost)
 
 
 class AWSInstance(object):
