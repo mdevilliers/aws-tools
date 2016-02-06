@@ -95,16 +95,16 @@ class AWSPricingStore(object):
         # io1       Provisioned IOPS (SSD)  Amazon EBS Provisioned IOPS (SSD) volumes
         # standard  Magnetic                Amazon EBS Magnetic volumes
         if ebs_type == 'gp2':
-             return self._get_volume_prices(aws_region, 'Amazon EBS General Purpose (SSD) volumes')
+             return self._get_volume_prices(aws_region, 'Amazon EBS General Purpose (SSD) volumes', None)
         if ebs_type == 'io1':
-            return self._get_volume_prices(aws_region, 'Amazon EBS Provisioned IOPS (SSD) volumes')
+            return self._get_volume_prices(aws_region, 'Amazon EBS Provisioned IOPS (SSD) volumes', 'perPIOPSreq')
         if ebs_type == 'standard':
-            return self._get_volume_prices(aws_region, 'Amazon EBS Magnetic volumes')
+            return self._get_volume_prices(aws_region, 'Amazon EBS Magnetic volumes', 'perMMIOreq')
 
         return PriceNotFoundError(aws_region, ebs_type)
 
     # ugly
-    def _get_volume_prices(self, aws_region, type_long_name):
+    def _get_volume_prices(self, aws_region, type_long_name, iops_long_name):
         region = self._first_or_none(
                         filter(
                             lambda r: r['region'] == aws_region, self._ebs_data['config']['regions']
@@ -115,10 +115,18 @@ class AWSPricingStore(object):
 
         types = region['types']
 
-        values = filter(lambda t: t['name'] == 'Amazon EBS Magnetic volumes', types)
-        perGBrate = filter(lambda p: p['rate'] == 'perGBmoProvStorage', values[0]['values'])
-        iops = filter(lambda p: p['rate'] == 'perMMIOreq', values[0]['values'])
-        return float(perGBrate[0]['prices']['USD']), float(iops[0]['prices']['USD'])
+        values = filter(lambda t: t['name'] == type_long_name, types)
+
+        perGBrateNode = filter(lambda p: p['rate'] == 'perGBmoProvStorage', values[0]['values'])
+        perGBrate = float(perGBrateNode[0]['prices']['USD'])
+
+        if iops_long_name is not None:
+            iopsNode = filter(lambda p: p['rate'] == iops_long_name, values[0]['values'])
+            iops = float(iopsNode[0]['prices']['USD'])
+        else:
+            iops = 0.0
+
+        return perGBrate, iops
 
     # REVIEW : this must already exist in the stdlib ?
     def _first_or_none(self, some_list):

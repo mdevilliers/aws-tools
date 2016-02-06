@@ -123,6 +123,8 @@ class AWSVolume(object):
         # The EBS provisioned volume costs $0.125 per GB per month and $0.10 per provisioned IOPs per month. 
         if self.type == 'standard':
             self.cost = self.cost_per_gb * self.size
+            # TODO : calculate an IOPS made value
+            
         if self.type == 'gp2':
             self.cost = self.cost_per_gb * self.size
         if self.type == 'io1':
