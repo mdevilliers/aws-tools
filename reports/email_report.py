@@ -61,7 +61,7 @@ class HtmlEmailTemplateReportWriter(object):
         for volume in volumes:
             volumes_cost_per_month += volume.cost
 
-        html += "Volumes (total): {} <br/> Ongoing (month)</body></html>".format(
+        html += "Volumes (total): {} <br/> Ongoing (30 day month) : ${:.2f}</body></html>".format(
             len(volumes),
             volumes_cost_per_month)
 
