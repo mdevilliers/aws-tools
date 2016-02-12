@@ -37,15 +37,5 @@ class ConsoleReporter(object):
 
         for volume in volumes:
             volumes_cost_per_month += volume.cost
-            # print("{} ${:.2f} \t{} \t{} \t{} \t{} \t{}".format(
-            #                                 volume.createdAtUtc,
-            #                                 volume.cost,
-            #                                 volume.identifier,
-            #                                 volume.type,
-            #                                 volume.aws_region,
-            #                                 volume.size,
-            #                                 volume.provisioned_iops))
-            # print("${:.2f} ${:.2f}".format(
-            #     volume.cost_per_gb, 
-            #     volume.iops_cost))
+            
         print ("Ongoing (30 day month) : \t${:.2f}".format(volumes_cost_per_month ))
