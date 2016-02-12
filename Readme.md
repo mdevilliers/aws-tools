@@ -1,3 +1,45 @@
+aws-tools
+---------
+
+Collection of helpers developed to devops the AWS
+
+installation
+------------
+
+Install dependancies
+
+```
+pip install -r requirements.txt
+```
+
+aws-ami-copier
+--------------
+
+Copy ami images accross regions.
+
+```
+usage: aws_ami_copier.py [-h] -aws-access-key AWS_ACCESS_KEY -aws-secret-key
+                         AWS_SECRET_KEY -ami AMI -image_type IMAGE_TYPE
+                         -region REGION
+
+Tool to copy an ami image to all of the regions.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -aws-access-key AWS_ACCESS_KEY
+                        AWS Access Key (or AWS_ACCESS_KEY environment
+                        variable)
+  -aws-secret-key AWS_SECRET_KEY
+                        AWS Secret Key (or AWS_SECRET_KEY environment
+                        variable)
+  -ami AMI              AMI to copy (or AMI environment variable)
+  -image_type IMAGE_TYPE
+                        Image type e.g. centos or ubuntu (or IMAGE_TYPE
+                        environment variable)
+  -region REGION        Region to copy from (or REGION environment variable)
+
+```
+
 aws-usage-reporter
 ------------------
 
@@ -5,11 +47,7 @@ Build a report of your current aws instances along side their accrued cost.
 
 The report can either be sent to the console and or via email.
 
-Install dependancies
 
-```
-pip install -r requirements.txt
-```
 
 ```
 usage: aws_reporter.py [-h] -aws-access-key AWS_ACCESS_KEY -aws-secret-key
