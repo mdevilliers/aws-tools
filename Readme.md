@@ -6,8 +6,6 @@ Collection of helpers developed to devops the AWS
 installation
 ------------
 
-Install dependancies
-
 ```
 pip install -r requirements.txt
 ```
@@ -15,7 +13,7 @@ pip install -r requirements.txt
 aws-ami-copier
 --------------
 
-Copy ami images accross regions.
+Copy ami images across regions.
 
 ```
 usage: aws_ami_copier.py [-h] -aws-access-key AWS_ACCESS_KEY -aws-secret-key
@@ -43,7 +41,7 @@ optional arguments:
 aws-usage-reporter
 ------------------
 
-Build a report of your current aws instances along side their accrued cost.
+Build a report of your current AWS instances and volumes along side their accrued and projected cost.
 
 The report can either be sent to the console and or via email.
 
@@ -83,7 +81,7 @@ To report to the console
 python aws_reporter.py --aws-secret-key {REDACTED} --aws-access-key {REDACTED}
 ```
 
-To send an email (only Gmail supported) plus report to the console and email
+To send an email (only GMAIL supported) plus report to the console and email
 
 ```
 python aws_reporter.py --aws-secret-key {REDACTED} --aws-access-key REDACTED --email-password {REDACTED} --email-from abc@abc.com --email-to one@abc.com,two@abc.com --reports Email,Console
