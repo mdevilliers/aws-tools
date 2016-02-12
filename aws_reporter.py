@@ -2,8 +2,9 @@
 
 from __future__ import print_function
 
-from argparse import ArgumentParser, Action
+from argparse import ArgumentParser
 
+from options.helper import EnvDefault
 from aws.price import PriceNotFoundError
 from aws.aws import AWS
 from reports.console_report import ConsoleReporter
@@ -12,7 +13,6 @@ from reports.email_report import HtmlEmailTemplateReportWriter
 from datetime import datetime
 import json
 import logging
-import os
 import sys
 
 regions = ['us-east-1', 'us-west-1', 'us-west-2', 'eu-west-1', 'sa-east-1',
@@ -133,24 +133,6 @@ class Whitelist(object):
 
     def ok(self, identifier):
         return identifier not in self._data
-
-
-# http://stackoverflow.com/questions/10551117/setting-options-from-environment-variables-when-using-argparse
-class EnvDefault(Action):
-    """Inspects the environment for a variable
-    before looking for a command line value"""
-    def __init__(self, envvar, required=True, default=None, **kwargs):
-        if not default and envvar:
-            if envvar in os.environ:
-                default = os.environ[envvar]
-        if required and default:
-            required = False
-        super(EnvDefault, self).__init__(default=default, required=required,
-                                         **kwargs)
-
-    def __call__(self, parser, namespace, values, option_string=None):
-        setattr(namespace, self.dest, values)
-
 
 if __name__ == '__main__':
     main()
